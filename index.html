@@ -5440,6 +5440,21 @@
             `;
           }
 
+          // Уведомление о распределении остатка между асаба
+          if (results.asabaApplied) {
+            const asabaRecipients =
+              results.asabaRecipients?.join(", ") || "наследники-асаба";
+            noticesHtml += `
+              <div class="notice notice--info">
+                <span class="notice__icon">📜</span>
+                <div>
+                  <strong>Остаток распределен между асаба</strong>
+                  <p>Остаток имущества после фиксированных долей был распределен между: ${asabaRecipients} (соотношение 2:1 для мужчин и женщин).</p>
+                </div>
+              </div>
+            `;
+          }
+
           // Уведомление об аль-Умарийятайн
           if (results.umariyyatanApplied) {
             const caseDescription =
@@ -5663,8 +5678,9 @@
             destination: AppState.remainderDestination,
           };
 
+          // Учитываем погрешность вычислений с плавающей точкой
           const hasRemainder =
-            (remainder.percentage || 0) > 0.01 || (remainder.amount || 0) > 0;
+            (remainder.percentage || 0) > 0.01 && (remainder.amount || 0) > 1;
 
           this.elements.remainderPanel.classList.toggle(
             "hidden",
@@ -6205,35 +6221,45 @@
                 ? remainder.divide(new Fraction(totalUnits, 1))
                 : new Fraction(0, 1);
 
-            const sonFraction = unitFraction.multiply(new Fraction(2, 1));
+            // Доля одного сына (2 единицы)
+            const perSonFraction = unitFraction.multiply(new Fraction(2, 1));
+            // Общая доля всех сыновей
+            const totalSonsFraction = perSonFraction.multiply(
+              new Fraction(formData.heirs.sons, 1)
+            );
             results.heirs.push({
               name:
                 formData.heirs.sons === 1
                   ? "Сын"
                   : `Сыновья (${formData.heirs.sons})`,
               relation: "Потомок покойного",
-              baseFraction: sonFraction,
-              finalFraction: sonFraction,
-              percentage: sonFraction.toDecimal() * 100,
-              amount: formData.totalEstate * sonFraction.toDecimal(),
+              baseFraction: totalSonsFraction,
+              finalFraction: totalSonsFraction,
+              percentage: totalSonsFraction.toDecimal() * 100,
+              amount: formData.totalEstate * totalSonsFraction.toDecimal(),
               dalil: 'Коран, сура "ан-Ниса", 4:11',
               blocked: false,
               blockedBy: null,
             });
 
             if (formData.heirs.daughters > 0) {
-              const daughterAsabaFraction = unitFraction;
+              // Доля одной дочери (1 единица)
+              const perDaughterFraction = unitFraction;
+              // Общая доля всех дочерей
+              const totalDaughtersFraction = perDaughterFraction.multiply(
+                new Fraction(formData.heirs.daughters, 1)
+              );
               results.heirs.push({
                 name:
                   formData.heirs.daughters === 1
                     ? "Дочь"
                     : `Дочери (${formData.heirs.daughters})`,
                 relation: "Потомок покойного",
-                baseFraction: daughterAsabaFraction,
-                finalFraction: daughterAsabaFraction,
-                percentage: daughterAsabaFraction.toDecimal() * 100,
+                baseFraction: totalDaughtersFraction,
+                finalFraction: totalDaughtersFraction,
+                percentage: totalDaughtersFraction.toDecimal() * 100,
                 amount:
-                  formData.totalEstate * daughterAsabaFraction.toDecimal(),
+                  formData.totalEstate * totalDaughtersFraction.toDecimal(),
                 dalil: 'Коран, сура "ан-Ниса", 4:11',
                 blocked: false,
                 blockedBy: null,
@@ -6427,6 +6453,22 @@
                 blocked: false,
                 blockedBy: null,
               });
+            }
+
+            // Помечаем что остаток распределён между асаба
+            results.asabaApplied = true;
+            results.asabaRecipients = results.asabaRecipients || [];
+            results.asabaRecipients.push(
+              brotherCount === 1
+                ? "Брат (полнородный)"
+                : `Братья полнородные (${brotherCount})`
+            );
+            if (sisterCount > 0) {
+              results.asabaRecipients.push(
+                sisterCount === 1
+                  ? "Сестра (полнородная)"
+                  : `Сёстры полнородные (${sisterCount})`
+              );
             }
           } else if (
             formData.heirs.fullBrothers > 0 &&
