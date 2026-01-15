@@ -1,0 +1,554 @@
+/* ========================================
+   Responsive Styles - Mobile First
+   ======================================== */
+
+/* Base mobile styles (320px+) */
+@media screen and (max-width: 767px) {
+  :root {
+    --container-padding: var(--spacing-sm);
+  }
+
+  .header {
+    padding: var(--spacing-md) 0;
+  }
+
+  .header__title {
+    font-size: var(--font-size-lg);
+    flex-direction: column;
+    gap: var(--spacing-xs);
+    line-height: 1.3;
+  }
+
+  .header__logo {
+    width: 56px;
+    height: 56px;
+  }
+
+  .header__subtitle {
+    font-size: var(--font-size-sm);
+    padding: 0 var(--spacing-sm);
+  }
+
+  .section-title {
+    font-size: var(--font-size-xl);
+  }
+
+  /* Modal adjustments */
+  .modal {
+    padding: var(--spacing-sm);
+    align-items: flex-start;
+    padding-top: var(--spacing-lg);
+  }
+
+  .modal__content {
+    padding: var(--spacing-md);
+    max-height: none;
+    margin: 0;
+    width: calc(100% - var(--spacing-md));
+  }
+
+  .modal__title {
+    font-size: var(--font-size-lg);
+  }
+
+  .obligations-list__item {
+    padding: var(--spacing-sm);
+    flex-direction: row;
+    text-align: left;
+    gap: var(--spacing-sm);
+  }
+
+  .obligations-list__icon {
+    font-size: var(--font-size-xl);
+  }
+
+  /* Form adjustments */
+  .form-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-sm);
+  }
+
+  .form-input--small {
+    max-width: 100%;
+  }
+
+  .form-section {
+    padding: var(--spacing-sm);
+    margin-bottom: var(--spacing-md);
+  }
+
+  .form-section__title {
+    font-size: var(--font-size-base);
+  }
+
+  /* Collapsible sections mobile optimization */
+  .collapsible-section__header {
+    padding: var(--spacing-sm);
+  }
+
+  .collapsible-section__content {
+    padding: var(--spacing-sm);
+  }
+
+  /* Results - show cards instead of table */
+  .results-table-wrapper {
+    display: none;
+  }
+
+  .results-cards {
+    display: block;
+  }
+
+  .results-card__details {
+    grid-template-columns: 1fr;
+  }
+
+  /* Glossary */
+  .glossary-term {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spacing-xs);
+  }
+
+  .glossary-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-sm);
+  }
+
+  /* FAQ */
+  .faq-question {
+    font-size: var(--font-size-sm);
+    padding: var(--spacing-sm);
+    padding-right: calc(var(--spacing-sm) + 26px);
+    padding-left: calc(var(--spacing-sm) * 2);
+  }
+
+  .faq-answer {
+    padding: 0 var(--spacing-sm) var(--spacing-sm);
+    font-size: var(--font-size-sm);
+  }
+
+  /* Footer */
+  .disclaimer {
+    padding: var(--spacing-md);
+  }
+
+  .disclaimer__title {
+    font-size: var(--font-size-base);
+  }
+
+  /* Buttons */
+  .btn--large {
+    width: 100%;
+    padding: var(--spacing-md);
+  }
+
+  .results-actions {
+    flex-direction: column;
+    gap: var(--spacing-sm);
+  }
+
+  .results-actions .btn {
+    width: 100%;
+  }
+
+  /* Improved spacing for mobile */
+  .main {
+    padding: var(--spacing-md) 0;
+  }
+
+  .results-section {
+    padding: var(--spacing-md) 0;
+  }
+
+  .glossary-section {
+    padding: var(--spacing-md) 0;
+  }
+
+  .faq-section {
+    padding: var(--spacing-md) 0;
+  }
+
+  /* Better mobile typography */
+  .form-label {
+    font-size: var(--font-size-sm);
+    font-weight: 600;
+  }
+
+  .form-hint {
+    font-size: var(--font-size-xs);
+  }
+}
+
+/* Tablet styles (768px+) */
+@media screen and (min-width: 768px) {
+  :root {
+    --container-padding: var(--spacing-lg);
+  }
+
+  .header {
+    padding: var(--spacing-2xl) 0;
+  }
+
+  .header__title {
+    font-size: var(--font-size-3xl);
+  }
+
+  .modal__content {
+    padding: var(--spacing-xl);
+  }
+
+  .glossary-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .radio-group {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .radio {
+    flex: 0 0 auto;
+  }
+}
+
+/* Desktop styles (1024px+) */
+@media screen and (min-width: 1024px) {
+  :root {
+    --container-max-width: 1000px;
+  }
+
+  .header__title {
+    font-size: var(--font-size-4xl);
+  }
+
+  .section-title {
+    font-size: var(--font-size-3xl);
+  }
+
+  .glossary-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .results-table th,
+  .results-table td {
+    padding: var(--spacing-md);
+  }
+}
+
+/* Extra small mobile screens (320px-479px) */
+@media screen and (max-width: 479px) {
+  :root {
+    --container-padding: var(--spacing-xs);
+    --font-size-base: 0.9rem;
+  }
+
+  .header {
+    padding: var(--spacing-sm) 0;
+  }
+
+  .header__title {
+    font-size: var(--font-size-base);
+    flex-direction: column;
+    gap: var(--spacing-xs);
+  }
+
+  .header__logo {
+    width: 48px;
+    height: 48px;
+  }
+
+  .header__subtitle {
+    font-size: var(--font-size-xs);
+    padding: 0 var(--spacing-xs);
+  }
+
+  .section-title {
+    font-size: var(--font-size-lg);
+    margin-bottom: var(--spacing-md);
+  }
+
+  .modal__content {
+    padding: var(--spacing-sm);
+    width: calc(100% - var(--spacing-xs));
+  }
+
+  .modal__title {
+    font-size: var(--font-size-base);
+  }
+
+  .obligations-list__item {
+    padding: var(--spacing-xs);
+    flex-direction: row;
+    text-align: left;
+    gap: var(--spacing-xs);
+  }
+
+  .obligations-list__icon {
+    font-size: var(--font-size-lg);
+  }
+
+  .form-section {
+    padding: var(--spacing-xs);
+    margin-bottom: var(--spacing-sm);
+  }
+
+  .form-section__title {
+    font-size: var(--font-size-sm);
+  }
+
+  .form-label {
+    font-size: var(--font-size-xs);
+  }
+
+  .form-input {
+    padding: var(--spacing-xs) var(--spacing-sm);
+    font-size: var(--font-size-sm);
+  }
+
+  .btn {
+    padding: var(--spacing-xs) var(--spacing-sm);
+    font-size: var(--font-size-sm);
+  }
+
+  .btn--large {
+    padding: var(--spacing-sm) var(--spacing-md);
+  }
+
+  .results-card {
+    padding: var(--spacing-sm);
+    margin-bottom: var(--spacing-sm);
+  }
+
+  .results-card__header {
+    margin-bottom: var(--spacing-xs);
+  }
+
+  .results-card__name {
+    font-size: var(--font-size-sm);
+  }
+
+  .results-card__amount {
+    font-size: var(--font-size-sm);
+  }
+
+  .glossary-item {
+    padding: var(--spacing-sm);
+  }
+
+  .glossary-term__ar {
+    font-size: var(--font-size-lg);
+  }
+
+  .glossary-term__ru {
+    font-size: var(--font-size-sm);
+  }
+
+  .glossary-definition {
+    font-size: var(--font-size-xs);
+  }
+
+  .faq-question {
+    padding: var(--spacing-xs);
+    padding-right: calc(var(--spacing-xs) + 24px);
+    padding-left: calc(var(--spacing-xs) * 2);
+    font-size: var(--font-size-xs);
+  }
+
+  .faq-answer {
+    padding: 0 var(--spacing-xs) var(--spacing-xs);
+    font-size: var(--font-size-xs);
+  }
+
+  .disclaimer {
+    padding: var(--spacing-sm);
+  }
+
+  .disclaimer__title {
+    font-size: var(--font-size-sm);
+  }
+
+  .disclaimer__text {
+    font-size: var(--font-size-xs);
+  }
+}
+
+/* Touch-friendly enhancements */
+@media (hover: none) and (pointer: coarse) {
+  .btn,
+  .radio,
+  .checkbox,
+  .collapsible-section__header,
+  .faq-question {
+    min-height: 48px;
+  }
+
+  .form-input {
+    min-height: 48px;
+    font-size: 16px; /* Prevents zoom on iOS */
+    padding: var(--spacing-md);
+  }
+
+  /* Larger touch targets */
+  .radio__mark,
+  .checkbox__mark {
+    width: 24px;
+    height: 24px;
+  }
+
+  .radio input:checked + .radio__mark::after {
+    width: 10px;
+    height: 10px;
+  }
+
+  /* Better touch spacing for form elements */
+  .form-group {
+    margin-bottom: var(--spacing-lg);
+  }
+
+  .radio,
+  .checkbox {
+    padding: var(--spacing-md);
+    margin-bottom: var(--spacing-xs);
+  }
+
+  /* Improved modal touch interaction */
+  .modal__content {
+    padding: var(--spacing-lg);
+    margin: var(--spacing-md);
+  }
+
+  /* Better tooltip interaction on touch */
+  .tooltip {
+    border-bottom: 2px solid var(--color-primary);
+    padding: var(--spacing-xs) 0;
+  }
+}
+
+/* Mobile tooltip adjustments */
+@media screen and (max-width: 767px) {
+  .tooltip {
+    position: relative;
+  }
+
+  .tooltip::before {
+    position: fixed;
+    z-index: 9999;
+    max-width: calc(100vw - 2rem);
+    font-size: var(--font-size-xs);
+    padding: var(--spacing-xs) var(--spacing-sm);
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 100%;
+    margin-bottom: var(--spacing-xs);
+    word-wrap: break-word;
+    white-space: normal;
+  }
+
+  .tooltip::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+/* Touch device specific styles */
+@media (hover: none) and (pointer: coarse) {
+  .tooltip {
+    border-bottom: 2px dotted var(--color-primary);
+  }
+
+  .tooltip::before {
+    font-size: var(--font-size-sm);
+    padding: var(--spacing-sm);
+    max-width: 280px;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  :root {
+    --color-border: #000;
+    --color-text-muted: #333;
+  }
+
+  .btn--primary {
+    border: 2px solid var(--color-text-inverse);
+  }
+
+  .form-input {
+    border-width: 3px;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* Mobile landscape orientation */
+@media screen and (max-width: 767px) and (orientation: landscape) {
+  .modal {
+    padding: var(--spacing-xs);
+    padding-top: var(--spacing-sm);
+  }
+
+  .modal__content {
+    max-height: 85vh;
+    overflow-y: auto;
+    padding: var(--spacing-sm);
+  }
+
+  .header {
+    padding: var(--spacing-sm) 0;
+  }
+
+  .main {
+    padding: var(--spacing-sm) 0;
+  }
+
+  .results-section {
+    padding: var(--spacing-sm) 0;
+  }
+
+  .form-section {
+    margin-bottom: var(--spacing-sm);
+  }
+
+  .obligations-list__item {
+    flex-direction: row;
+    text-align: left;
+    padding: var(--spacing-xs);
+  }
+}
+
+/* iOS Safari specific fixes */
+@supports (-webkit-touch-callout: none) {
+  .form-input {
+    font-size: 16px; /* Prevents zoom on iOS */
+    -webkit-appearance: none;
+    appearance: none;
+    border-radius: var(--radius-md);
+  }
+
+  .btn {
+    -webkit-appearance: none;
+    appearance: none;
+    border-radius: var(--radius-md);
+  }
+
+  /* Fix for iOS Safari viewport height issues */
+  .modal {
+    height: 100vh;
+    height: -webkit-fill-available;
+  }
+}

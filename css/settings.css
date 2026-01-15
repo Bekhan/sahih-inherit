@@ -1,0 +1,54 @@
+/* Панель выбора языка */
+
+.settings-panel {
+  position: absolute;
+  top: var(--spacing-sm);
+  right: var(--spacing-md);
+  display: flex;
+  align-items: center;
+}
+
+.settings-group {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.lang-btn {
+  padding: 4px 8px;
+  border: none;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: color 0.2s ease;
+  letter-spacing: 0.5px;
+}
+
+.lang-btn:hover {
+  color: white;
+}
+
+.lang-btn--active {
+  color: white;
+  font-weight: 700;
+}
+
+.lang-divider {
+  color: rgba(255, 255, 255, 0.3);
+  font-size: 13px;
+  user-select: none;
+}
+
+.header .container {
+  position: relative;
+}
+
+@media (max-width: 480px) {
+  .settings-panel {
+    position: static;
+    justify-content: center;
+    margin-top: var(--spacing-sm);
+  }
+}

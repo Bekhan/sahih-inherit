@@ -1,0 +1,286 @@
+{
+  "meta": {
+    "title": "Islamic Inheritance Calculator | Calculate Shares According to Sharia",
+    "description": "Free online Islamic inheritance calculator. Calculate heir shares according to Quran and Sunnah."
+  },
+  "header": {
+    "title": "Islamic Inheritance Calculator",
+    "subtitle": "Calculate inheritance shares according to Quran and Sunnah"
+  },
+  "obligations": {
+    "title": "Preliminary Obligations",
+    "description": "Before distributing inheritance, complete the following:",
+    "burial": "Burial expenses",
+    "debts": "Payment of debts",
+    "will": "Execution of will (wasiyyah)",
+    "willNote": "No more than 1/3 of estate, not to an heir",
+    "distribution": "Distribution of inheritance",
+    "checkbox": "I understand the order of actions",
+    "continue": "Proceed to calculator"
+  },
+  "calculator": {
+    "title": "Enter inheritance details",
+    "estateAmount": "Estate amount",
+    "estateAmountPlaceholder": "Enter amount",
+    "estateAmountHint": "Enter amount after deducting debts and will",
+    "calculate": "Calculate inheritance"
+  },
+  "spouse": {
+    "title": "Spouse of the deceased",
+    "none": "No spouse",
+    "husband": "Husband",
+    "wife": "Wife",
+    "wifeCount": "Number of wives",
+    "wifeCountHint": "Share is divided equally among all wives",
+    "wifeShareHint": "Wife's share: {share} ({condition})",
+    "husbandShareHint": "Husband's share: {share} ({condition})"
+  },
+  "descendants": {
+    "title": "Descendants (descending line)",
+    "sons": "Sons",
+    "daughters": "Daughters",
+    "grandsonsFromSon": "Grandsons from son",
+    "granddaughtersFromSon": "Granddaughters from son"
+  },
+  "ancestors": {
+    "title": "Ancestors (ascending line)",
+    "father": "Father",
+    "mother": "Mother",
+    "paternalGrandfather": "Grandfather (father's father)",
+    "paternalGrandmother": "Grandmother (father's mother)",
+    "maternalGrandmother": "Grandmother (mother's mother)"
+  },
+  "siblings": {
+    "title": "Brothers and sisters (al-ikhwa)",
+    "full": "Full (germane)",
+    "fullBrothers": "Brothers",
+    "fullSisters": "Sisters",
+    "paternal": "Paternal (consanguine)",
+    "paternalBrothers": "Brothers",
+    "paternalSisters": "Sisters",
+    "maternal": "Maternal (uterine)",
+    "maternalBrothers": "Brothers",
+    "maternalSisters": "Sisters",
+    "distant": "Distant male-line heirs (asaba)",
+    "nephewsFullBrothers": "Sons of full brothers (nephews)",
+    "nephewsPaternalBrothers": "Sons of paternal brothers (nephews)",
+    "unclesFull": "Uncles (father's full brothers)",
+    "unclesPaternal": "Uncles (father's paternal brothers)"
+  },
+  "results": {
+    "title": "Calculation Results",
+    "heir": "Heir",
+    "relation": "Relation",
+    "share": "Share",
+    "percent": "%",
+    "amount": "Amount",
+    "basis": "Basis",
+    "total": "Total",
+    "remainder": "Remaining estate",
+    "remainderTo": "Treasury/Charity",
+    "print": "🖨️ Print / Save as PDF",
+    "recalculate": "↩️ New calculation"
+  },
+  "blocking": {
+    "byFather": "Blocked by father",
+    "byMother": "Blocked by mother",
+    "bySon": "Blocked by son",
+    "byGrandson": "Blocked by grandson from son",
+    "byGrandfather": "Blocked by grandfather",
+    "byFullBrother": "Blocked by full brother",
+    "byDescendants": "Blocked by descendants",
+    "byCloserAsaba": "Blocked by closer male-line heirs",
+    "byNephewsFullBrothers": "Blocked by nephews (sons of full brothers)",
+    "byNephewsPaternalBrothers": "Blocked by nephews (sons of paternal brothers)",
+    "byUnclesFull": "Blocked by uncles (father's full brothers)"
+  },
+  "conditions": {
+    "withChildren": "with children",
+    "withoutChildren": "without children"
+  },
+  "glossary": {
+    "title": "Glossary of Islamic Inheritance Law Terms",
+    "asaba": {
+      "ar": "عصبة",
+      "term": "Asaba",
+      "definition": "Male-line heirs who receive the residue of the estate after fixed shares are distributed."
+    },
+    "awl": {
+      "ar": "العول",
+      "term": "Al-Awl",
+      "definition": "Proportional reduction of all heirs' shares when the sum of fixed shares exceeds 100%."
+    },
+    "radd": {
+      "ar": "الرد",
+      "term": "Ar-Radd",
+      "definition": "Proportional distribution of the remaining estate among heirs with fixed shares when there are no asaba."
+    },
+    "hijb": {
+      "ar": "الحجب",
+      "term": "Hijb",
+      "definition": "Exclusion of an heir from their share due to the presence of a closer relative."
+    },
+    "kalala": {
+      "ar": "الكلالة",
+      "term": "Kalala",
+      "definition": "A deceased person who left neither parents nor children."
+    },
+    "dhawilArham": {
+      "ar": "ذوو الأرحام",
+      "term": "Dhawil-Arham",
+      "definition": "Relatives who do not fall into the categories of ashab al-furud or asaba (e.g., maternal aunt)."
+    },
+    "furud": {
+      "ar": "الفروض",
+      "term": "Furud",
+      "definition": "Fixed inheritance shares established by the Quran: 1/2, 1/4, 1/8, 2/3, 1/3, 1/6."
+    },
+    "wasiyyah": {
+      "ar": "الوصية",
+      "term": "Wasiyyah",
+      "definition": "A bequest executed before inheritance distribution. No more than 1/3 of the estate and not to an heir."
+    },
+    "faraid": {
+      "ar": "الفرائض",
+      "term": "Ilm al-Faraid",
+      "definition": "The science of inheritance law in Islam, studying the rules of estate distribution."
+    },
+    "tirkah": {
+      "ar": "التركة",
+      "term": "Tirkah",
+      "definition": "The property left by the deceased, subject to distribution among heirs."
+    }
+  },
+  "faq": {
+    "title": "Frequently Asked Questions About Islamic Inheritance",
+    "q1": {
+      "question": "Why is a man's share greater than a woman's?",
+      "answer": "In Islam, a man bears financial responsibility for the family (nafaqa), including supporting his wife, children, and parents. A woman is not obligated to spend her wealth on the family — it is her personal property. Therefore, the man's larger share compensates for his obligations."
+    },
+    "q2": {
+      "question": "Which Quran verses establish the heirs' shares?",
+      "answer": "The main verses about inheritance are in Surah an-Nisa: verses 11, 12, and 176. They establish the shares of children, parents, spouses, and siblings."
+    },
+    "q3": {
+      "question": "Can a murderer inherit?",
+      "answer": "No. According to the hadith of the Prophet ﷺ: 'The killer does not inherit' (Tirmidhi, Ibn Majah). This rule protects against crimes committed for inheritance."
+    },
+    "q4": {
+      "question": "Do Muslims and non-Muslims inherit from each other?",
+      "answer": "According to the majority of scholars — no. The Prophet ﷺ said: 'A Muslim does not inherit from a kafir, and a kafir does not inherit from a Muslim' (Bukhari, Muslim)."
+    },
+    "q5": {
+      "question": "Where does the grandmother's share (1/6) come from?",
+      "answer": "The grandmother's share is established by the Sunnah. It is narrated that a grandmother came to the Prophet ﷺ asking about her share, and he allocated 1/6 to her (Abu Dawud, Tirmidhi)."
+    },
+    "q6": {
+      "question": "What to do if the sum of shares exceeds 100%?",
+      "answer": "The rule of al-awl is applied — proportional reduction of all shares. This decision was made by Caliph Umar ibn al-Khattab and approved by the companions."
+    },
+    "q7": {
+      "question": "How is inheritance distributed when there are no heirs?",
+      "answer": "If there are no heirs from ashab al-furud, asaba, or dhawil-arham, the property goes to the Muslim treasury (bayt al-mal) for public needs."
+    },
+    "q8": {
+      "question": "What is the order of actions when distributing inheritance?",
+      "answer": "1) Burial expenses, 2) Payment of the deceased's debts, 3) Execution of the will (up to 1/3), 4) Distribution of the remainder among heirs."
+    },
+    "q9": {
+      "question": "Why is it important to study ilm al-faraid?",
+      "answer": "The Prophet ﷺ said: 'Learn the science of inheritance and teach it, for it is half of knowledge' (Ibn Majah). Proper distribution of inheritance is an obligation of Muslims."
+    },
+    "q10": {
+      "question": "Can one refuse their share of inheritance?",
+      "answer": "Yes, an heir can voluntarily refuse their share in favor of other heirs or give it as sadaqa. The main thing is that it must be a voluntary decision."
+    },
+    "q11": {
+      "question": "Why are brothers divided into full, paternal, and maternal?",
+      "answer": "This affects their inheritance rights. Full brothers (same father and mother) have priority. Paternal brothers (same father) inherit in the absence of full brothers. Maternal brothers (same mother) have special rules and inherit only in kalala."
+    }
+  },
+  "footer": {
+    "warning": "Important Notice",
+    "disclaimer1": "This calculator is for educational purposes only and is intended to help understand the principles of Islamic inheritance law (ilm al-faraid).",
+    "disclaimer2": "For issuing fatwas and resolving specific inheritance matters, please consult a qualified scholar (alim) or mufti.",
+    "disclaimer3": "The calculation results are not an official ruling and cannot be used as a legal document.",
+    "attention": "Attention:",
+    "copyright": "© 2026 Islamic Inheritance Calculator"
+  },
+  "heirs": {
+    "husband": "Husband",
+    "wife": "Wife",
+    "wives": "Wives",
+    "son": "Son",
+    "sons": "Sons",
+    "daughter": "Daughter",
+    "daughters": "Daughters",
+    "father": "Father",
+    "mother": "Mother",
+    "grandfather": "Grandfather",
+    "grandmother": "Grandmother",
+    "grandmothers": "Grandmothers",
+    "fullBrother": "Full brother",
+    "fullBrothers": "Full brothers",
+    "fullSister": "Full sister",
+    "fullSisters": "Full sisters",
+    "paternalBrother": "Paternal brother",
+    "paternalBrothers": "Paternal brothers",
+    "paternalSister": "Paternal sister",
+    "paternalSisters": "Paternal sisters",
+    "maternalBrother": "Maternal brother",
+    "maternalBrothers": "Maternal brothers",
+    "maternalSister": "Maternal sister",
+    "maternalSisters": "Maternal sisters",
+    "grandsonFromSon": "Grandson from son",
+    "grandsonsFromSon": "Grandsons from son",
+    "granddaughterFromSon": "Granddaughter from son",
+    "granddaughtersFromSon": "Granddaughters from son",
+    "nephewFullBrother": "Nephew (son of full brother)",
+    "nephewsFullBrothers": "Nephews (sons of full brothers)",
+    "nephewPaternalBrother": "Nephew (son of paternal brother)",
+    "nephewsPaternalBrothers": "Nephews (sons of paternal brothers)",
+    "uncleFull": "Uncle (father's full brother)",
+    "unclesFull": "Uncles (father's full brothers)",
+    "unclePaternal": "Uncle (father's paternal brother)",
+    "unclesPaternal": "Uncles (father's paternal brothers)"
+  },
+  "relations": {
+    "spouseOfDeceased": "Spouse of deceased",
+    "spouseOfDeceasedM": "Spouse of deceased",
+    "childOfDeceased": "Descendant of deceased",
+    "parentOfDeceased": "Ancestor of deceased",
+    "siblingOfDeceased": "Sibling of deceased",
+    "grandchildOfDeceased": "Grandchild of deceased"
+  },
+  "dalil": {
+    "quran411": "Quran, Surah an-Nisa, 4:11",
+    "quran412": "Quran, Surah an-Nisa, 4:12",
+    "quran4176": "Quran, Surah an-Nisa, 4:176",
+    "sunnah": "Sunnah of the Prophet ﷺ",
+    "ijma": "Scholarly consensus (Ijma)",
+    "hadithGrandmother": "Hadith about grandmother (Abu Dawud, Tirmidhi)",
+    "hadithGranddaughter": "Hadith of Ibn Masud (Bukhari)"
+  },
+  "messages": {
+    "noHeirs": "No heirs selected",
+    "enterAmount": "Enter estate amount",
+    "invalidAmount": "Invalid amount",
+    "calculationComplete": "Calculation complete",
+    "awlApplied": "Al-Awl applied (proportional reduction of shares)",
+    "raddApplied": "Ar-Radd applied (distribution of remainder)",
+    "asabaShare": "Remainder as asaba",
+    "blockedHeir": "Heir is blocked",
+    "shareOf": "Share of",
+    "each": "each",
+    "total": "total",
+    "perPerson": "per person"
+  },
+  "notices": {
+    "awlTitle": "Al-Awl Rule Applied",
+    "awlDescription": "The sum of heirs' shares exceeded 100%. All shares were proportionally reduced to achieve fair distribution.",
+    "raddTitle": "Ar-Radd Principle Applied",
+    "raddDescription": "The remaining estate was proportionally distributed among heirs: {recipients}.",
+    "asabaTitle": "Remainder Distributed Among Asaba",
+    "asabaDescription": "The remaining estate after fixed shares was distributed among: {recipients} (ratio 2:1 for males and females)."
+  }
+}

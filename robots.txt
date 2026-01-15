@@ -1,0 +1,27 @@
+# Robots.txt для наследствопоисламу.рф
+
+User-agent: *
+Allow: /
+
+# Запрещаем индексацию служебных файлов
+Disallow: /node_modules/
+Disallow: /tests/
+Disallow: /.git/
+Disallow: /.vscode/
+Disallow: /*.config.js
+
+# Карта сайта
+Sitemap: https://наследствопоисламу.рф/sitemap.xml
+
+# Основные поисковые боты
+User-agent: Googlebot
+Allow: /
+
+User-agent: Yandex
+Allow: /
+
+User-agent: Mail.Ru
+Allow: /
+
+User-agent: Bingbot
+Allow: /

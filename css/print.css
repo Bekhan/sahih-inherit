@@ -1,0 +1,163 @@
+/* ========================================
+   Print Styles
+   ======================================== */
+@media print {
+  /* Hide non-essential elements for print */
+  .modal,
+  .header,
+  .form-actions,
+  .results-actions,
+  .faq-section,
+  .btn,
+  .glossary-section {
+    display: none !important;
+  }
+
+  /* Show only results section and footer */
+  .results-section {
+    display: block !important;
+    background: none !important;
+    padding: 20px 0 !important;
+    box-shadow: none !important;
+  }
+
+  /* Print-only elements */
+  .print-only {
+    display: block !important;
+  }
+
+  /* Hide mobile cards, show table */
+  .results-cards {
+    display: none !important;
+  }
+
+  .results-table-wrapper {
+    display: block !important;
+    overflow: visible !important;
+  }
+
+  /* Table styling for print */
+  .results-table {
+    box-shadow: none !important;
+    border: 2px solid #000 !important;
+    width: 100% !important;
+    font-size: 12px !important;
+  }
+
+  .results-table th,
+  .results-table td {
+    border: 1px solid #000 !important;
+    padding: 8px 4px !important;
+    font-size: 11px !important;
+  }
+
+  .results-table th {
+    background-color: #f0f0f0 !important;
+    color: #000 !important;
+    font-weight: bold !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  /* Notices styling for print */
+  .notices {
+    margin-bottom: 20px !important;
+  }
+
+  .notice {
+    border: 1px solid #000 !important;
+    padding: 10px !important;
+    margin-bottom: 10px !important;
+    background: none !important;
+    page-break-inside: avoid !important;
+  }
+
+  .notice--warning {
+    border-left: 4px solid #000 !important;
+  }
+
+  .notice--info {
+    border-left: 4px solid #666 !important;
+  }
+
+  /* Footer and disclaimer for print */
+  .footer {
+    background: none !important;
+    color: #000 !important;
+    border-top: 2px solid #000 !important;
+    padding: 20px 0 !important;
+    margin-top: 30px !important;
+    page-break-inside: avoid !important;
+  }
+
+  .disclaimer {
+    background: none !important;
+    border: 2px solid #000 !important;
+    color: #000 !important;
+    padding: 15px !important;
+    margin-bottom: 15px !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  .disclaimer__title {
+    color: #000 !important;
+    font-size: 14px !important;
+    margin-bottom: 10px !important;
+  }
+
+  .disclaimer__text {
+    font-size: 11px !important;
+    line-height: 1.4 !important;
+    margin-bottom: 8px !important;
+    opacity: 1 !important;
+  }
+
+  .footer__copyright {
+    text-align: center !important;
+    font-size: 10px !important;
+    opacity: 1 !important;
+    color: #000 !important;
+  }
+
+  /* Page settings */
+  @page {
+    margin: 2cm;
+    size: A4;
+  }
+
+  /* Prevent page breaks in important sections */
+  .results-table,
+  .disclaimer {
+    page-break-inside: avoid;
+  }
+
+  /* Ensure proper text color for print */
+  * {
+    color: #000 !important;
+    background: transparent !important;
+  }
+
+  /* Special styling for blocked heirs in print */
+  .blocked-heir {
+    opacity: 0.7 !important;
+    font-style: italic !important;
+  }
+
+  .blocking-info td {
+    font-size: 10px !important;
+    font-style: italic !important;
+  }
+
+  /* Print header with calculator title */
+  .results-section::before {
+    content: "☪️ Исламский Калькулятор Наследства - Результаты расчета";
+    display: block !important;
+    text-align: center !important;
+    font-size: 18px !important;
+    font-weight: bold !important;
+    margin-bottom: 20px !important;
+    padding-bottom: 10px !important;
+    border-bottom: 2px solid #000 !important;
+  }
+}
